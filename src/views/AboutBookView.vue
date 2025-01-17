@@ -17,12 +17,12 @@ import NavbarHeader from '@/components/NavbarHeader.vue'
           height="620"
           decoding="async"
           data-nimg="1"
-          class="-mt-16 mb-4"
+          class="-mt-16 mb-4 w-[400px] md:w-[500px]"
           srcset="
-            https://www.anxiousgeneration.com/_next/image?url=%2Fbook-both.webp&w=828&q=75  1x,
-            https://www.anxiousgeneration.com/_next/image?url=%2Fbook-both.webp&w=1920&q=75 2x
+            https://github.com/vvayHuang/futureTogether/blob/main/src/assets/book-cover-removebg-preview.png?raw=true&w=828&q=75  1x,
+            https://github.com/vvayHuang/futureTogether/blob/main/src/assets/book-cover-removebg-preview.png?raw=true&w=1920&q=75 2x
           "
-          src="https://www.anxiousgeneration.com/_next/image?url=%2Fbook-both.webp&w=1920&q=75"
+          src="https://github.com/vvayHuang/futureTogether/blob/main/src/assets/book-cover-removebg-preview.png?raw=true"
           style="color: transparent"
         />
         <figcaption class="p-2 text-sm rounded-md bg-gray-100">
@@ -148,14 +148,15 @@ import NavbarHeader from '@/components/NavbarHeader.vue'
           height="620"
           decoding="async"
           data-nimg="1"
+          class="-mt-16 mb-4 w-[400px]"
           srcset="
-            https://www.anxiousgeneration.com/_next/image?url=%2Fbook-both.webp&w=828&q=75  1x,
-            https://www.anxiousgeneration.com/_next/image?url=%2Fbook-both.webp&w=1920&q=75 2x
+            https://github.com/vvayHuang/futureTogether/blob/main/src/assets/book-cover-removebg-preview.png?raw=true&w=828&q=75  1x,
+            https://github.com/vvayHuang/futureTogether/blob/main/src/assets/book-cover-removebg-preview.png?raw=true&w=1920&q=75 2x
           "
-          src="https://www.anxiousgeneration.com/_next/image?url=%2Fbook-both.webp&w=1920&q=75"
+          src="https://github.com/vvayHuang/futureTogether/blob/main/src/assets/book-cover-removebg-preview.png?raw=true"
           style="color: transparent"
         />
-        <figcaption class="p-1 text-xs rounded-md bg-gray-100">
+        <figcaption class="p-2 text-sm rounded-md bg-gray-100">
           The Anxious Generation - US Version / UK Version
         </figcaption>
       </figure>
