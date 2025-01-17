@@ -20,6 +20,14 @@ const router = createRouter({
       component: () => import('../views/AboutBookView.vue'),
     },
   ],
+  //點選連結時，可以保持原本的位置在畫面上的頂部
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
 })
 
 export default router
