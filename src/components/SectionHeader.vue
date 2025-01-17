@@ -57,10 +57,11 @@ const navigation = [
     class="py-2 lg:py-5 mx-auto flex flex-row justify-between sticky top-0 z-50 w-ful bg-black"
   >
     <div class="flex w-full items-center justify-between px-2 xs:px-4 lg:px-4 gap-4 lg:gap-8">
-      <a href="/" aria-label="Home" class="text-white font-black text-sm md:text-base">
-        <span class="sr-only hidden">The Anxious Generation</span>
-        Future Together 我們一起行動
-      </a>
+      <router-link href="/" aria-label="Home" class="text-white font-black text-sm md:text-base"
+        ><span class="sr-only hidden">The Anxious Generation</span> Future Together
+        我們一起行動</router-link
+      >
+
       <div class="flex justify-between items-center gap-3 xs:gap-4">
         <div class="lg:flex justify-between items-center gap-3 xs:gap-4 hidden">
           <ul class="justify-between lg:flex gap-6">
