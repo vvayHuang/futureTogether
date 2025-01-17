@@ -6,7 +6,7 @@ import NavbarHeader from '@/components/NavbarHeader.vue'
   <NavbarHeader />
   <div class="bg-cover bg-yellow-pixels">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-16">
-      <h1 class="text-black text-4xl lg:text-5xl font-bold mb-8">什麼是焦慮世代？</h1>
+      <h1 class="text-black text-4xl lg:text-5xl font-bold mb-8">延伸閱讀</h1>
       <p>
         大家都常聽許多世代的劃分說法。<br />
         譬如，1946至1964年間出生是「嬰兒潮世代」，1965至1980年出生是「X世代」，<br />

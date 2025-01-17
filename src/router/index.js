@@ -19,6 +19,16 @@ const router = createRouter({
       name: 'aboutbook',
       component: () => import('../views/AboutBookView.vue'),
     },
+    {
+      path: '/research',
+      name: 'research',
+      component: () => import('../views/ResearchView.vue'),
+    },
+    {
+      path: '/resource',
+      name: 'resource',
+      component: () => import('../views/ResourceView.vue'),
+    },
   ],
   //點選連結時，可以保持原本的位置在畫面上的頂部
   scrollBehavior(to, from, savedPosition) {

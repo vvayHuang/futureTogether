@@ -1,9 +1,9 @@
 <script setup>
-import SectionHeader from '@/components/SectionHeader.vue'
+import NavbarHeader from '@/components/NavbarHeader.vue'
 </script>
 
 <template>
-  <SectionHeader />
+  <NavbarHeader />
   <div class="bg-cover bg-yellow-pixels h-64"></div>
   <div class="max-w-5xl mx-auto py-6 grid grid-cols-1 lg:grid-cols-3 text-black -mt-48 px-4 gap-8">
     <!-- 右邊 -->
