@@ -25,10 +25,12 @@ import NavbarHeader from '@/components/NavbarHeader.vue'
           src="https://github.com/vvayHuang/futureTogether/blob/main/src/assets/book-cover-removebg-preview.png?raw=true"
           style="color: transparent"
         />
-        <figcaption class="p-2 text-sm rounded-md bg-gray-100">
-          The Anxious Generation - US Version / UK Version
-        </figcaption>
+        <figcaption class="p-2 text-sm rounded-md bg-gray-100">失控的焦慮世代 中文版</figcaption>
       </figure>
+      <div class="my-16">
+        <h3 class="text-3xl font-bold text-center">睡眠剝奪．社交障礙．注意力碎片化．上癮</h3>
+        <p class="text-3xl font-bold text-center">全世界熱烈討論中</p>
+      </div>
       <div class="border-b border-gray-200 pb-4 mt-4">
         <h3 class="text-black text-2xl max-w-2xl font-bold pb-3">有關本書</h3>
         <span class="prose">
@@ -162,7 +164,8 @@ import NavbarHeader from '@/components/NavbarHeader.vue'
       </figure>
       <h1 class="text-xl font-bold pt-4 text-nowrap">失控的焦慮世代</h1>
       <p class="py-4">手機餵養的世代，如何面對心理疾病的瘟疫<br />席捲全球的話題與對策討論</p>
-      <h2 class="text-lg pb-4 lg:pb-16">強納森‧海德特（Jonathan Haidt）</h2>
+      <h2 class="text-lg">強納森‧海德特（Jonathan Haidt）</h2>
+      <p class="pb-4 lg:pb-16 text-sm">鍾玉玨/譯</p>
       <div class="">
         <div class="py-0 sticky top-24">
           <h3 class="text-xl pb-8">購買連結</h3>
