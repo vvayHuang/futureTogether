@@ -1,4 +1,5 @@
 <script setup>
+import BtnBlack from '@/components/BtnBlack.vue'
 import ComponentNavigation from '@/components/ComponentNavigation.vue'
 import resource from '@/data/resource'
 
@@ -48,9 +49,7 @@ const { category, books } = resource
         <a
           href="https://www.goodinside.com/access-anxiousgenerationguide-lp/?utm_source=free_guide&amp;utm_medium=partner&amp;utm_campaign=tag-parent-lp"
           target="_blank"
-          rel="noopener noreferrer"
-          class="button-black inline-block"
-          >Download Guide</a
+          ><BtnBlack>Download Guide</BtnBlack></a
         >
       </div>
       <img
@@ -86,7 +85,7 @@ const { category, books } = resource
           decoding="async"
           data-nimg="1"
           class="w-8 h-8"
-          src="https://www.anxiousgeneration.com/resource-images/book-open.svg"
+          :src="item.imageSrc"
           style="color: transparent"
         />
       </div>
