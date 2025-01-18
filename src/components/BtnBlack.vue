@@ -1,5 +1,5 @@
 <template>
-  <button type="submit" class="button-black mt-8"><slot></slot></button>
+  <button type="submit" class="button-black"><slot></slot></button>
 </template>
 <style scoped>
 .button-black {

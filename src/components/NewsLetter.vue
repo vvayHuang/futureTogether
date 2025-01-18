@@ -80,7 +80,7 @@ import BtnBlack from './BtnBlack.vue'
         </div>
       </div>
     </form>
-    <BtnBlack>送出</BtnBlack>
+    <BtnBlack class="mt-8">送出</BtnBlack>
   </div>
 </template>
 

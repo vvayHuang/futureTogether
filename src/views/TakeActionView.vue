@@ -46,7 +46,9 @@ const { parents, school, genZ, legislators, everyone, category } = takeAction
             「我們怎樣才能讓學校成為無手機環境？」這是我們收到最
             多的問題之一。因此我們整理了一個行動方案來幫助你找到 答案。
           </p>
-          <router-link to="/phonefreeschool"><BtnBlack>請廣周知</BtnBlack></router-link>
+          <router-link to="/phonefreeschool"
+            ><BtnBlack class="mt-8">請廣周知</BtnBlack></router-link
+          >
         </div>
         <img
           alt="ow can we makes chools phone-free?"

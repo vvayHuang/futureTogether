@@ -48,7 +48,7 @@ const { category, books } = resource
         <a
           href="https://www.goodinside.com/access-anxiousgenerationguide-lp/?utm_source=free_guide&amp;utm_medium=partner&amp;utm_campaign=tag-parent-lp"
           target="_blank"
-          ><BtnBlack>Download Guide</BtnBlack></a
+          ><BtnBlack class="mt-8">Download Guide</BtnBlack></a
         >
       </div>
       <img
