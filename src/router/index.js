@@ -29,6 +29,11 @@ const router = createRouter({
       name: 'resource',
       component: () => import('../views/ResourceView.vue'),
     },
+    {
+      path: '/takeaction',
+      name: 'takeaction',
+      component: () => import('../views/TakeActionView.vue'),
+    },
   ],
   //點選連結時，可以保持原本的位置在畫面上的頂部
   scrollBehavior(to, from, savedPosition) {

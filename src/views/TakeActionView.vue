@@ -10,11 +10,12 @@ const { category, books } = resource
   <ComponentNavigation />
   <div class="bg-cover bg-yellow-pixels">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-16">
-      <h1 class="text-black text-4xl lg:text-5xl font-bold mb-8">資源連結</h1>
+      <h1 class="text-black text-4xl lg:text-5xl font-bold mb-8">採取行動</h1>
       <p>
-        這裡所列的是和我們合作的單位或個人的影響力資源，包括書籍、Substack文章、課堂教材和家長指南。<br />
-        可以按主題範疇篩選這些資源。所有內容都是為了幫助青少年、家長、教育者和立法者減少手機型童年的影響，<br />
-        重建以玩耍為主的童年的美好。
+        我們每個人都有責任協助減少手機型童年的影響，並幫助孩子們在現實世界中重新獲得更多的獨立性。
+        在《失控的焦慮世代》中，海德特提出了四項改革或新準則，以便為數位時代更健康的童年奠定基礎。
+        光是一個人、一個家庭，或一所學校，往往難以逆轉日益增長的螢幕幕使用時間，但如果我們共同努力，就可以力挽狂瀾。
+        請瀏覽以下資源，大家一起採取行動，從現在開始改變！
       </p>
     </div>
   </div>
@@ -22,13 +23,14 @@ const { category, books } = resource
   <div class="bg-yellow-light mt-1 lg:sticky top-12 lg:top-16 z-[99]">
     <div class="max-w-6xl mx-auto lg:flex justify-between items-center p-4">
       <div class="flex flex-col lg:flex-row gap-2 lg:gap-4 mb-4 lg:mb-0">
-        <a
-          v-for="item in category"
-          :key="item.id"
-          :href="item.href"
-          class="text-black underline hover:text-grey"
-          >{{ item.title }}</a
-        >
+        <a href="#books" class="text-black underline hover:text-grey">Books</a
+        ><a href="#parent" class="text-black underline hover:text-grey">Family Resources</a
+        ><a href="#educator" class="text-black underline hover:text-grey">Educator Resources</a
+        ><a href="#tools" class="hidden text-black underline hover:text-grey">Tools</a
+        ><a href="#newsletters" class="text-black underline hover:text-grey">Newsletters</a
+        ><a href="#videos" class="text-black underline hover:text-grey">Videos</a
+        ><a href="#podcasts" class="text-black underline hover:text-grey">Podcasts</a
+        ><a href="#tech" class="text-black underline hover:text-grey">Tech</a>
       </div>
     </div>
   </div>
@@ -72,7 +74,7 @@ const { category, books } = resource
     v-for="item in category"
     :key="item.id"
     class="max-w-6xl px-4 text-black mx-auto pt-8 lg:flex justify-between items-start flex-col"
-    :id="item.name"
+    :id="item.href"
   >
     <h2 class="flex items-center gap-4">
       <div class="p-4 bg-gray-100 rounded-full">
