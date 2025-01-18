@@ -1,15 +1,20 @@
 <template>
   <div
-    v-for="n in 500"
+    v-for="n in 300"
     :key="n"
     class="Hero_burstImage__izql7"
     :style="{
       top: `${(top = Math.random() * 80 + 15)}%`,
       left: `${(left = Math.random() * 90 + 5)}%`,
       right: `${(right = Math.random() * 10 + 15)}%`,
+      bottom: `${(bottom = Math.random() * 20 + 5)}%`,
       transform: `rotate(${Math.random() * 360}deg)`,
       display:
-        Math.random() > 0.5 && Math.abs(top - 50) > 10 && Math.abs(left - 50) > 10
+        Math.random() > 0.5 &&
+        Math.abs(top - 50) > 10 &&
+        Math.abs(left - 50) > 10 &&
+        Math.abs(right - 50) > 10 &&
+        Math.abs(bottom - 50) > 10
           ? 'block'
           : 'none',
     }"

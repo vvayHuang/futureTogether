@@ -1,16 +1,15 @@
 <script setup>
-import NewsLetter from '@/components/NewsLetter.vue'
+import ComponentNavigation from '@/components/ComponentNavigation.vue'
 import SectionDescription from '@/components/SectionDescription.vue'
 import SectionFeatureIn from '@/components/SectionFeatureIn.vue'
 import SectionFreeAnixious from '@/components/SectionFreeAnixious.vue'
-import SectionHeader from '@/components/SectionHeader.vue'
 import SectionHero from '@/components/SectionHero.vue'
 import SectionOrgaMap from '@/components/SectionOrgaMap.vue'
 import SectionSlogan from '@/components/SectionSlogan.vue'
 </script>
 
 <template>
-  <SectionHeader />
+  <ComponentNavigation />
   <main>
     <SectionHero />
     <SectionDescription />
@@ -18,6 +17,5 @@ import SectionSlogan from '@/components/SectionSlogan.vue'
     <SectionFreeAnixious />
     <SectionOrgaMap />
     <SectionFeatureIn />
-    <NewsLetter />
   </main>
 </template>

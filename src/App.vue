@@ -1,14 +1,12 @@
 <script setup>
-import NewsLetter from './components/NewsLetter.vue'
 import SectionFixedTop from './components/SectionFixedTop.vue'
-import Sectionfooter from './components/Sectionfooter.vue'
+import SectionFooter from './components/SectionFooter.vue'
 </script>
 
 <template>
   <SectionFixedTop />
   <RouterView />
-  <NewsLetter />
-  <Sectionfooter />
+  <SectionFooter />
 </template>
 
 <style></style>

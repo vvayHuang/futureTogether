@@ -1,43 +1,13 @@
 <script setup>
-import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { ref } from 'vue'
 
 const headerContainer = ref(null)
 const dropdownVisible = ref(false)
-
-const handleScroll = () => {
-  const scrollTop = window.scrollY
-  const maxScroll = 500 // 最大滾動距離
-  const opacity = Math.min(1, scrollTop / maxScroll)
-  const windowWidth = window.innerWidth
-
-  // if (headerContainer.value) {
-  //   if (windowWidth >= 1440) {
-  //     headerContainer.value.style.backgroundColor = `rgba(38, 38, 38, ${opacity})`
-  //   } else if (windowWidth < 768) {
-  //     headerContainer.value.style.backgroundColor = 'black'
-  //   }
-  // }
-}
 
 const toggleDropdown = () => {
   dropdownVisible.value = !dropdownVisible.value
 }
 
-const handleClickOutside = (event) => {
-  if (headerContainer.value && !headerContainer.value.contains(event.target)) {
-    dropdownVisible.value = false
-  }
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-  document.addEventListener('click', handleClickOutside)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll)
-  document.removeEventListener('click', handleClickOutside)
-})
 const isMenuOpen = ref(false)
 
 function toggleMenu() {
