@@ -28,7 +28,7 @@ import BtnBlack from './BtnBlack.vue'
             延遲到16歲。學校需要實現無手機環境。
           </p>
           <p class="text-center">
-            <a class="underline" href="/phone-free-schools">了解無手機學校環境</a>
+            <router-link class="underline" to="/phonefreeschool">了解無手機學校環境</router-link>
           </p>
         </div>
         <div class="space-y-4 bg-green-light rounded-lg p-4 lg:p-8">
@@ -140,7 +140,9 @@ import BtnBlack from './BtnBlack.vue'
               或探索更多方法，幫助推動這四項新準則的建立。
             </p>
             <div class="text-white">
-              <div><BtnBlack>採取行動</BtnBlack></div>
+              <div>
+                <BtnBlack><router-link to="takeaction">採取行動</router-link></BtnBlack>
+              </div>
             </div>
           </div>
         </div>

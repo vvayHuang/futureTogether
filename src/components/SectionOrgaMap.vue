@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import BtnBlack from './BtnBlack.vue'
 </script>
 
@@ -16,7 +16,11 @@ import BtnBlack from './BtnBlack.vue'
             協助尋找在你關注的問題上與你目標一致的機構和專家，大
             家一起努力結束以手機為中心的童年，重建以遊戲為基礎的 童年。
           </p>
-          <BtnBlack>看全部</BtnBlack>
+          <BtnBlack
+            ><a target="_blank" href="https://www.anxiousgeneration.com/aligned-orgs"
+              >看全部</a
+            ></BtnBlack
+          >
         </div>
       </div>
       <div class="pointer-events-none"></div>

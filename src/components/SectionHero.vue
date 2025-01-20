@@ -391,7 +391,10 @@ onBeforeUnmount(() => {
               全球青少年的心理健康從2010年代初開始急劇惡化。
               憂鬱症、焦慮、自殘和自殺的比例急劇上升， 許多指標都比之前的世代增長超過一倍。
             </p>
-            <a class="block py-4 font-bold underline hover:text-grey" href="/research/the-evidence"
+            <a
+              target="_blank"
+              class="block py-4 font-bold underline hover:text-grey"
+              href="https://www.anxiousgeneration.com/research/the-evidence"
               >瀏覽看這裡</a
             >
           </div>
@@ -477,13 +480,6 @@ onBeforeUnmount(() => {
           </div>
         </div>
       </div>
-      <!-- 停止播放 -->
-      <!-- <button
-        class="text-sm lg:text-base absolute top-2 bottom-auto lg:top-auto lg:bottom-4 right-4 z-10 bg-white border-2 border-black text-black px-2 lg:px-4 py-2 rounded-full"
-        aria-label="Stop all video playback"
-      >
-        Stop Videos
-      </button> -->
     </div>
     <div class="bg-white text-black p-8 max-w-2xl mx-auto text-center">
       <h2>
@@ -497,9 +493,11 @@ onBeforeUnmount(() => {
         Generation）。 這本書探討了這些日益嚴重的現象，也歸納了原因。
         出書後激起全球關注，在臺灣也引發熱烈討論如何一起來改善， 因而有了這個行動及網站。
       </p>
-      <a class="block py-4 font-bold underline hover:text-grey" href="/book">想要多了解這本書</a
-      ><a class="block py-4 font-bold underline hover:text-grey" href="/about"
-        >想要多了解這個行動</a
+      <router-link class="block py-4 font-bold underline hover:text-grey" to="/aboutbook"
+        >想要多了解這本書</router-link
+      >
+      <router-link class="block py-4 font-bold underline hover:text-grey" to="/aboutus"
+        >想要多了解這個行動</router-link
       >
     </div>
   </div>
