@@ -6,10 +6,10 @@ const heroContainer = ref(null)
 
 const handleScroll = () => {
   const scrollTop = window.scrollY
-  const maxScroll = 1500 // 最大滾動距離
+  const maxScroll = 2000 // 最大滾動距離
   const opacity = Math.max(0, 1 - scrollTop / maxScroll)
   if (heroContainer.value) {
-    heroContainer.value.style.backgroundColor = `rgba(38, 38, 38, ${opacity})`
+    heroContainer.value.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`
   }
 }
 
@@ -567,8 +567,7 @@ h2.large {
   height: calc(100vh - 88px);
 }
 .Hero-bg-transition {
-  background-color: rgba(38, 38, 38, 1); /* 初始背景色 */
-  background-color: rgba(38, 38, 38, 0.8); /* 滾動時背景色 */
+  background-color: rgba(0, 0, 0, 1); /* 初始背景色 */
 }
 
 @media (min-width: 1024px) {
