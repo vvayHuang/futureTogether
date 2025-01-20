@@ -6,7 +6,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
   <ComponentNavigation />
   <div class="bg-cover bg-yellow-pixels h-64"></div>
   <div class="max-w-5xl mx-auto py-6 grid grid-cols-1 lg:grid-cols-3 text-black -mt-48 px-4 gap-8">
-    <!-- 右邊 -->
+    <!-- 左邊 -->
     <div class="col-span-2 order-2 md:order-1">
       <figure class="image-caption-container hidden md:block mx-0 my-8">
         <img
@@ -139,7 +139,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
         </span>
       </div>
     </div>
-    <!-- 左邊 -->
+    <!-- 右邊 -->
     <div class="col-span-1 order-1 md:order-2 relative">
       <figure class="image-caption-container -mt-16 block md:hidden mx-auto">
         <img
@@ -191,7 +191,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                 <ul class="list-none flex flex-wrap m-0 p-0 rounded-b-md">
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="http://www.amazon.com/gp/product/0593655036?tag=randohouseinc7986-20"
+                      href="https://www.books.com.tw/products/0011006606?gad_source=1&gclid=Cj0KCQiAhbi8BhDIARIsAJLOludseq2iIULj0ra3YA-jCvyeDhEoMSQrFWc0nRbwnGntK7LG9SDjvcwaAq7SEALw_wcB"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -200,7 +200,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="https://www.anrdoezrs.net/click-8373827-11819508?sid=PRHEFFDF5A7F1&amp;url=http://www.barnesandnoble.com/w/?ean=9780593655030"
+                      href="https://www.eslite.com/product/10012030392682792386005?srsltid=AfmBOoqimSsNqDTU_CZBWww4CK4x2iUmgmI46NCUM7pSKh2T0KiQW64f"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -209,7 +209,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="http://www.tkqlhce.com/click-8373827-10747236?SID=PRHEFFDF5A7F1--9780593655030&amp;url=http://www.booksamillion.com/p/9780593655030"
+                      href="https://www.kingstone.com.tw/basic/2018741166464/?srsltid=AfmBOooul-_s3pbPz05RNQ-3TzxaXV1KzCmma0jwlKfHulUJtBZ1lHpA"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -218,7 +218,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="https://bookshop.org/a/2186/9780593655030?prhc=PRHEFFDF5A7F1"
+                      href="https://www.taaze.tw/products/11101051985.html?srsltid=AfmBOopYwnEdigxGl5IZO20ddBlBG_-Co3avCA77RLFbdNM55dIo3ELG"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -227,7 +227,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="http://www.hudsonbooksellers.com/book/9780593655030?utm_source=prh&amp;utm_medium=affiliate&amp;utm_term=301&amp;utm_content=PRHEFFDF5A7F1--9780593655030&amp;utm_campaign=9780593655030"
+                      href="https://www.locuspublishing.com/book/detail/10710"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -258,7 +258,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                 <ul class="list-none flex flex-wrap m-0 p-0 rounded-b-md">
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="http://www.amazon.com/gp/product/0593655036?tag=randohouseinc7986-20"
+                      href="https://www.books.com.tw/products/E050241959"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -267,7 +267,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="https://www.anrdoezrs.net/click-8373827-11819508?sid=PRHEFFDF5A7F1&amp;url=http://www.barnesandnoble.com/w/?ean=9780593655030"
+                      href="https://books.google.com/books/about/%E5%A4%B1%E6%8E%A7%E7%9A%84%E7%84%A6%E6%85%AE%E4%B8%96%E4%BB%A3_%E6%89%8B%E6%A9%9F%E9%A4%B5%E9%A4%8A%E7%9A%84%E4%B8%96.html?id=QnMyEQAAQBAJ"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -276,7 +276,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="http://www.tkqlhce.com/click-8373827-10747236?SID=PRHEFFDF5A7F1--9780593655030&amp;url=http://www.booksamillion.com/p/9780593655030"
+                      href="https://www.kobo.com/tw/zh/ebook/5G-NZvG40DWJScY5QYTpmw?srsltid=AfmBOoq_fPHA-Ar4nsYi1tRTY8VSXnkO9PA1KS0odUkjzZ23AYwSprfE"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -285,7 +285,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="https://bookshop.org/a/2186/9780593655030?prhc=PRHEFFDF5A7F1"
+                      href="https://readmoo.com/book/210358584000101?srsltid=AfmBOorYc00LT_5FMEe7lUJPu9XUWE076Or71y8-btScUHFJSf_ZPuYm"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -294,7 +294,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="http://www.hudsonbooksellers.com/book/9780593655030?utm_source=prh&amp;utm_medium=affiliate&amp;utm_term=301&amp;utm_content=PRHEFFDF5A7F1--9780593655030&amp;utm_campaign=9780593655030"
+                      href="https://www.amazon.com/%E5%A4%B1%E6%8E%A7%E7%9A%84%E7%84%A6%E6%85%AE%E4%B8%96%E4%BB%A3%EF%BC%9A%E6%89%8B%E6%A9%9F%E9%A4%B5%E9%A4%8A%E7%9A%84%E4%B8%96%E4%BB%A3%EF%BC%8C%E5%A6%82%E4%BD%95%E9%9D%A2%E5%B0%8D%E5%BF%83%E7%90%86%E7%96%BE%E7%97%85%E7%9A%84%E7%98%9F%E7%96%AB-%E6%89%8B%E6%A9%9F%E9%A4%B5%E9%A4%8A%E7%9A%84%E4%B8%96%E4%BB%A3%EF%BC%8C%E5%A6%82%E4%BD%95%E9%9D%A2%E5%B0%8D%E5%BF%83%E7%90%86%E7%96%BE%E7%97%85%E7%9A%84%E7%98%9F%E7%96%AB-Generation-Childhood-Traditional-ebook/dp/B0DNT9K6ZN"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -303,7 +303,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="http://www.hudsonbooksellers.com/book/9780593655030?utm_source=prh&amp;utm_medium=affiliate&amp;utm_term=301&amp;utm_content=PRHEFFDF5A7F1--9780593655030&amp;utm_campaign=9780593655030"
+                      href="https://readmoo.com/book/210358584000101?srsltid=AfmBOorQA_qfG343AWxnAud9_h8BT2Pa1P7TtCcwyGh6B5QR3QToWW2t"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -312,7 +312,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                   </li>
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="http://www.hudsonbooksellers.com/book/9780593655030?utm_source=prh&amp;utm_medium=affiliate&amp;utm_term=301&amp;utm_content=PRHEFFDF5A7F1--9780593655030&amp;utm_campaign=9780593655030"
+                      href="https://one.ebook.hyread.com.tw/bookDetail.jsp?id=414372"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -343,7 +343,7 @@ import ComponentNavigation from '@/components/ComponentNavigation.vue'
                 <ul class="list-none flex flex-wrap m-0 p-0 rounded-b-md">
                   <li class="mb-1 mr-1 text-sm">
                     <a
-                      href="http://www.amazon.com/gp/product/0593655036?tag=randohouseinc7986-20"
+                      href="https://www.locuspublishing.com/book/detail/10710"
                       class="text-white inline-block hover:bg-grey border rounded-full px-4 py-1"
                       target="_blank"
                       rel="noopener noreferrer"

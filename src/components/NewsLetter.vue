@@ -1,5 +1,61 @@
-<script setup lang="ts">
+<script setup>
 import BtnBlack from './BtnBlack.vue'
+import { reactive } from 'vue'
+
+// 表單資料
+const formData = reactive({
+  name: '',
+  email: '',
+  persona: '',
+})
+
+let isSubmitting = false
+
+// 提交表單的處理函數
+const submitForm = () => {
+  if (isSubmitting) return // 防止重複提交
+  isSubmitting = true
+
+  if (formData.name && formData.persona) {
+    const googleFormUrl =
+      'https://docs.google.com/forms/u/0/d/e/1FAIpQLScqjQ-OKep1vj3196c5ZkfLNb3Con4Hkt6mLagEsqLUp1eEbA/formResponse'
+
+    // 確保不重複加載 jQuery
+    if (!window.$) {
+      const script = document.createElement('script')
+      script.src = 'https://code.jquery.com/jquery-3.6.4.min.js'
+      script.onload = () => sendForm(googleFormUrl)
+      document.head.appendChild(script)
+    } else {
+      sendForm(googleFormUrl)
+    }
+  } else {
+    alert('Please fill out the required fields.')
+    isSubmitting = false
+  }
+}
+
+// 實際發送表單的函數
+const sendForm = (url) => {
+  $.ajax({
+    url: url,
+    crossDomain: true,
+    data: {
+      'entry.2110889308': formData.name,
+      'entry.1286466906': formData.email,
+      'entry.500979022': formData.persona,
+    },
+    type: 'POST',
+    complete: () => {
+      // 清空表單
+      formData.name = ''
+      formData.email = ''
+      formData.persona = ''
+      window.location.replace('index.html')
+      isSubmitting = false
+    },
+  })
+}
 </script>
 
 <template>
@@ -13,74 +69,44 @@ import BtnBlack from './BtnBlack.vue'
       我們絕不會向第三方分享或出售您的信息。我們將使用此郵件列表向運動成員
       提供最新參考資訊，並在必要時請大家一起行動。
     </p>
-    <form id="tag-newsletter" method="post" data-hs-cf-bound="true">
-      <div class="grid grid-cols-2 gap-4 justify-center max-w-lg mx-auto text-left px-4">
+    <form id="google-form">
+      <div class="grid grid-cols-2 gap-4 justify-center max-w-xl mx-auto text-left px-4">
         <div>
-          <label class="block" for="firstname">姓</label
-          ><input
+          <label class="block" for="name">姓名</label>
+          <input
             class="p-2 border w-full"
             type="text"
-            id="firstname"
-            required=""
-            aria-required="true"
-            placeholder="First Name"
-            name="firstname"
-            value=""
+            id="name"
+            v-model="formData.name"
+            required
+            placeholder="姓名"
           />
         </div>
         <div>
-          <label class="block" for="lastname">名</label
-          ><input
-            class="p-2 border w-full"
-            type="text"
-            id="lastname"
-            required=""
-            aria-required="true"
-            placeholder="Last Name"
-            name="lastname"
-            value=""
-          />
-        </div>
-        <div class="col-span-2">
-          <label class="block" for="email">電子信箱</label
-          ><input
+          <label class="block" for="email">電子信箱</label>
+          <input
             class="p-2 border w-full"
             type="email"
             id="email"
-            required=""
-            aria-required="true"
-            placeholder="Email Address"
-            name="email"
-            value=""
+            v-model="formData.email"
+            required
+            placeholder="你的信箱"
           />
         </div>
         <div>
-          <label class="block" for="zip">郵遞區號</label
-          ><input
-            class="p-2 border w-full"
-            type="text"
-            id="zip"
-            required=""
-            aria-required="true"
-            placeholder="Zip Code"
-            name="zip"
-            value=""
-          />
-        </div>
-        <div>
-          <label class="block" for="persona">你的職業</label
-          ><select name="persona" id="persona" class="p-2 border w-full">
-            <option value="" disabled="" hidden="" selected="">請選擇</option>
-            <option value="parent">雙親</option>
-            <option value="educator">教育者</option>
-            <option value="legislator">立法者</option>
-            <option value="gen_z">Z世代</option>
-            <option value="other">其他</option>
+          <label class="block" for="persona">你的職業</label>
+          <select id="persona" class="p-2 border w-full" v-model="formData.persona">
+            <option value="" disabled hidden>請選擇</option>
+            <option value="雙親">雙親</option>
+            <option value="教育者">教育者</option>
+            <option value="立法者">立法者</option>
+            <option value="Z世代">Z世代</option>
+            <option value="其他">其他</option>
           </select>
         </div>
       </div>
     </form>
-    <BtnBlack class="mt-8">送出</BtnBlack>
+    <BtnBlack class="mt-8" @click="submitForm">送出</BtnBlack>
   </div>
 </template>
 

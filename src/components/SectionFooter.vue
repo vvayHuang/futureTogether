@@ -120,25 +120,7 @@ import NewsLetter from './NewsLetter.vue'
         </div>
       </div>
       <!-- 版權聲明   -->
-      <div class="text-center text-sm mt-8">
-        © 2025 All rights reserved.<!-- -->
-        <a
-          href="https://www.nyu.edu/footer/accessibility.html"
-          target="_blank"
-          class="underline"
-          rel="noopener noreferrer"
-          aria-label="Read NYU's Accessibility Statement (opens in a new tab)"
-          >NYU Accessibility Statement</a
-        >. Built by<!-- -->
-        <a
-          href="https://www.township.agency?utm_source=tag"
-          target="_blank"
-          class="underline"
-          rel="noopener noreferrer"
-          aria-label="Visit Township website (opens in a new tab)"
-          >Township</a
-        >.
-      </div>
+      <div class="text-center text-sm mt-8">© 2025 All rights reserved.<!-- --></div>
     </div>
   </footer>
 </template>
