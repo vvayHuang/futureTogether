@@ -30,7 +30,7 @@ const submitForm = () => {
       sendForm(googleFormUrl)
     }
   } else {
-    alert('Please fill out the required fields.')
+    alert('請填寫必填欄位')
     isSubmitting = false
   }
 }
