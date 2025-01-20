@@ -3,7 +3,8 @@ import BtnBlack from '@/components/BtnBlack.vue'
 import ComponentNavigation from '@/components/ComponentNavigation.vue'
 import resource from '@/data/resource'
 
-const { category, books } = resource
+const { category, books, familyResources, educatorResources, newsletter, video, podcasts, tech } =
+  resource
 </script>
 
 <template>
@@ -32,6 +33,7 @@ const { category, books } = resource
       </div>
     </div>
   </div>
+  <!-- 本月主力合作 -->
   <div class="mt-12 mb-4 px-4">
     <div
       class="mx-auto max-w-6xl bg-gray-100 rounded-xl p-4 lg:p-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:gap-16"
@@ -68,53 +70,362 @@ const { category, books } = resource
       />
     </div>
   </div>
+  <!-- 書籍 -->
   <div
-    v-for="item in category"
-    :key="item.id"
-    class="max-w-6xl px-4 text-black mx-auto pt-8 lg:flex justify-between items-start flex-col"
-    :id="item.name"
+    class="max-w-6xl px-4 text-black mx-auto pt-8 lg:flex justify-between items-center"
+    :id="category[0].name"
   >
     <h2 class="flex items-center gap-4">
       <div class="p-4 bg-gray-100 rounded-full">
         <img
-          :alt="Books"
+          alt="Books"
           loading="lazy"
           width="24"
           height="24"
           decoding="async"
           data-nimg="1"
           class="w-8 h-8"
-          :src="item.imageSrc"
           style="color: transparent"
+          :src="category[0].imageSrc"
         />
       </div>
-      {{ item.title }}
+      {{ category[0].title }}
     </h2>
     <p class="hidden">Add some description here</p>
-    <div class="max-w-6xl mx-auto relative flex items-center pb-8 text-black px-4">
-      <div class="flex overflow-x-scroll hide-scroll-bar w-full space-x-2 lg:space-x-4">
-        <div
-          v-for="item in books"
-          :key="item.id"
-          class="min-h-64 my-4 min-w-60 max-w-60 p-2 lg:p-4 bg-gray-100 rounded-md border-t-4 border-gray-500 flex flex-col justify-between"
-        >
-          <div>
-            <a :href="item.href" target="_blank"
-              ><img
-                :alt="item.imageAlt"
-                loading="lazy"
-                width="417"
-                height="630"
-                decoding="async"
-                data-nimg="1"
-                class="w-auto h-[180px] mx-auto"
-                :src="item.imageSrc"
-                style="color: transparent"
-            /></a>
-          </div>
-          <div class="rounded-sm mt-2 w-full text-center text-xs bg-white p-2">
-            {{ item.title }}
-          </div>
+  </div>
+  <div class="max-w-6xl mx-auto relative flex items-center pb-8 text-black px-4">
+    <div class="flex overflow-x-scroll hide-scroll-bar w-full space-x-2 lg:space-x-4">
+      <div
+        v-for="item in books"
+        :key="item.id"
+        class="min-h-64 my-4 min-w-60 max-w-60 p-2 lg:p-4 bg-gray-100 rounded-md border-t-4 border-gray-500 flex flex-col justify-between"
+      >
+        <div>
+          <a :href="item.href" target="_blank"
+            ><img
+              :alt="item.imageAlt"
+              loading="lazy"
+              width="417"
+              height="630"
+              decoding="async"
+              data-nimg="1"
+              class="w-auto h-[180px] mx-auto"
+              :src="item.imageSrc"
+              style="color: transparent"
+          /></a>
+        </div>
+        <div class="rounded-sm mt-2 w-full text-center text-xs bg-white p-2">
+          {{ item.title }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 家長資源 -->
+  <div
+    class="max-w-6xl px-4 text-black mx-auto pt-8 lg:flex justify-between items-center"
+    :id="category[1].name"
+  >
+    <h2 class="flex items-center gap-4">
+      <div class="p-4 bg-gray-100 rounded-full">
+        <img
+          alt="Books"
+          loading="lazy"
+          width="24"
+          height="24"
+          decoding="async"
+          data-nimg="1"
+          class="w-8 h-8"
+          style="color: transparent"
+          :src="category[1].imageSrc"
+        />
+      </div>
+      {{ category[1].title }}
+    </h2>
+    <p class="hidden">Add some description here</p>
+  </div>
+  <div class="max-w-6xl mx-auto relative flex items-center pb-8 text-black px-4">
+    <div class="flex hide-scroll-bar lg:space-x-4 overflow-x-scroll space-x-2 w-full">
+      <div
+        v-for="item in familyResources"
+        :key="item.id"
+        class="min-h-64 my-4 min-w-60 max-w-60 p-2 lg:p-4 bg-gray-100 rounded-md border-t-4 border-gray-500 flex flex-col justify-between"
+      >
+        <a :href="item.href" target="_blank" class="flex justify-between gap-2 items-start"
+          ><h3 class="">{{ item.title }}</h3>
+          <img
+            alt="Course"
+            loading="lazy"
+            width="24"
+            height="24"
+            decoding="async"
+            data-nimg="1"
+            :src="item.imageSrc"
+            style="color: transparent"
+        /></a>
+        <p class="text-xs">
+          {{ item.content }}
+        </p>
+        <div class="rounded-sm mt-2 w-full text-center text-xs bg-white p-2">
+          {{ item.linkText }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 教學資源 -->
+  <div
+    class="max-w-6xl px-4 text-black mx-auto pt-8 lg:flex justify-between items-center"
+    :id="category[2].name"
+  >
+    <h2 class="flex items-center gap-4">
+      <div class="p-4 bg-gray-100 rounded-full">
+        <img
+          alt="Books"
+          loading="lazy"
+          width="24"
+          height="24"
+          decoding="async"
+          data-nimg="1"
+          class="w-8 h-8"
+          style="color: transparent"
+          :src="category[2].imageSrc"
+        />
+      </div>
+      {{ category[2].title }}
+    </h2>
+    <p class="hidden">Add some description here</p>
+  </div>
+  <div class="max-w-6xl mx-auto relative flex items-center pb-8 text-black px-4">
+    <div class="flex hide-scroll-bar lg:space-x-4 overflow-x-scroll space-x-2 w-full">
+      <div
+        v-for="item in educatorResources"
+        :key="item.id"
+        class="min-h-64 my-4 min-w-60 max-w-60 p-2 lg:p-4 bg-gray-100 rounded-md border-t-4 border-gray-500 flex flex-col justify-between"
+      >
+        <a :href="item.href" target="_blank" class="flex justify-between gap-2 items-start"
+          ><h3 class="">{{ item.title }}</h3>
+          <img
+            alt="Course"
+            loading="lazy"
+            width="24"
+            height="24"
+            decoding="async"
+            data-nimg="1"
+            :src="item.imageSrc"
+            style="color: transparent"
+        /></a>
+        <p class="text-xs">
+          {{ item.content }}
+        </p>
+        <div class="rounded-sm mt-2 w-full text-center text-xs bg-white p-2">
+          {{ item.linkText }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 電子報 -->
+  <div
+    class="max-w-6xl px-4 text-black mx-auto pt-8 lg:flex justify-between items-center"
+    :id="category[3].name"
+  >
+    <h2 class="flex items-center gap-4">
+      <div class="p-4 bg-gray-100 rounded-full">
+        <img
+          alt="Books"
+          loading="lazy"
+          width="24"
+          height="24"
+          decoding="async"
+          data-nimg="1"
+          class="w-8 h-8"
+          style="color: transparent"
+          :src="category[3].imageSrc"
+        />
+      </div>
+      {{ category[3].title }}
+    </h2>
+    <p class="hidden">Add some description here</p>
+  </div>
+  <div class="max-w-6xl mx-auto relative flex items-center pb-8 text-black px-4">
+    <div class="flex hide-scroll-bar lg:space-x-4 overflow-x-scroll space-x-2 w-full">
+      <div
+        v-for="item in newsletter"
+        :key="item.id"
+        class="min-h-64 my-4 min-w-60 max-w-60 p-2 lg:p-4 bg-gray-100 rounded-md border-t-4 border-gray-500 flex flex-col justify-between"
+      >
+        <a :href="item.href" target="_blank" class="flex gap-2 items-start"
+          ><img
+            alt="Course"
+            loading="lazy"
+            width="24"
+            height="24"
+            decoding="async"
+            data-nimg="1"
+            :src="item.imageSrc"
+            style="color: transparent"
+          />
+          <h3 class="">{{ item.title }}</h3>
+        </a>
+        <p class="text-xs">
+          {{ item.content }}
+        </p>
+        <div class="rounded-sm mt-2 w-full text-center text-xs bg-white p-2">
+          {{ item.linkText }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 影片與演講 -->
+  <div
+    class="max-w-6xl px-4 text-black mx-auto pt-8 lg:flex justify-between items-center"
+    :id="category[4].name"
+  >
+    <h2 class="flex items-center gap-4">
+      <div class="p-4 bg-gray-100 rounded-full">
+        <img
+          alt="Books"
+          loading="lazy"
+          width="24"
+          height="24"
+          decoding="async"
+          data-nimg="1"
+          class="w-8 h-8"
+          style="color: transparent"
+          :src="category[4].imageSrc"
+        />
+      </div>
+      {{ category[4].title }}
+    </h2>
+    <p class="hidden">Add some description here</p>
+  </div>
+  <div class="max-w-6xl mx-auto relative flex items-center pb-8 text-black px-4">
+    <div class="flex hide-scroll-bar lg:space-x-4 overflow-x-scroll space-x-2 w-full">
+      <div
+        v-for="item in video"
+        :key="item.id"
+        class="min-h-64 my-4 min-w-60 max-w-60 p-2 lg:p-4 bg-gray-100 rounded-md border-t-4 border-gray-500 flex flex-col justify-between"
+      >
+        <a :href="item.href" target="_blank" class="flex flex-col gap-2 items-start"
+          ><img
+            alt="Jonathan Haidt and First Lady of Virginia Suzanne S. Youngkin"
+            loading="lazy"
+            width="866"
+            height="508"
+            decoding="async"
+            data-nimg="1"
+            class="max-h-[200px] mx-auto rounded-md"
+            :src="item.imageSrc"
+            style="color: transparent"
+          />
+          <h3 class="">{{ item.title }}</h3>
+        </a>
+        <p class="text-xs">
+          {{ item.content }}
+        </p>
+        <div class="rounded-sm mt-2 w-full text-center text-xs bg-white p-2">
+          {{ item.linkText }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Podcasts -->
+  <div
+    class="max-w-6xl px-4 text-black mx-auto pt-8 lg:flex justify-between items-center"
+    :id="category[5].name"
+  >
+    <h2 class="flex items-center gap-4">
+      <div class="p-4 bg-gray-100 rounded-full">
+        <img
+          alt="Books"
+          loading="lazy"
+          width="24"
+          height="24"
+          decoding="async"
+          data-nimg="1"
+          class="w-8 h-8"
+          style="color: transparent"
+          :src="category[5].imageSrc"
+        />
+      </div>
+      {{ category[5].title }}
+    </h2>
+    <p class="hidden">Add some description here</p>
+  </div>
+  <div class="max-w-6xl mx-auto relative flex items-center pb-8 text-black px-4">
+    <div class="flex hide-scroll-bar lg:space-x-4 overflow-x-scroll space-x-2 w-full">
+      <div
+        v-for="item in podcasts"
+        :key="item.id"
+        class="min-h-64 my-4 min-w-60 max-w-60 p-2 lg:p-4 bg-gray-100 rounded-md border-t-4 border-gray-500 flex flex-col justify-between"
+      >
+        <a :href="item.href" target="_blank" class="flex flex-col gap-2 items-start"
+          ><img
+            alt="Jonathan Haidt and First Lady of Virginia Suzanne S. Youngkin"
+            loading="lazy"
+            width="866"
+            height="508"
+            decoding="async"
+            data-nimg="1"
+            class="max-h-[200px] mx-auto rounded-md"
+            :src="item.imageSrc"
+            style="color: transparent"
+          />
+          <h3 class="py-4">{{ item.title }}</h3>
+        </a>
+        <div class="rounded-sm mt-2 w-full text-center text-xs bg-white p-2">
+          {{ item.linkText }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 科技 -->
+  <div
+    class="max-w-6xl px-4 text-black mx-auto pt-8 lg:flex justify-between items-center"
+    :id="category[6].name"
+  >
+    <h2 class="flex items-center gap-4">
+      <div class="p-4 bg-gray-100 rounded-full">
+        <img
+          alt="Books"
+          loading="lazy"
+          width="24"
+          height="24"
+          decoding="async"
+          data-nimg="1"
+          class="w-8 h-8"
+          style="color: transparent"
+          :src="category[6].imageSrc"
+        />
+      </div>
+      {{ category[6].title }}
+    </h2>
+    <p class="hidden">Add some description here</p>
+  </div>
+  <div class="max-w-6xl mx-auto relative flex items-center pb-8 text-black px-4">
+    <div class="flex hide-scroll-bar lg:space-x-4 overflow-x-scroll space-x-2 w-full">
+      <div
+        v-for="item in tech"
+        :key="item.id"
+        class="min-h-64 my-4 min-w-60 max-w-60 p-2 lg:p-4 bg-gray-100 rounded-md border-t-4 border-gray-500 flex flex-col justify-between"
+      >
+        <a :href="item.href" target="_blank" class="flex flex-col gap-2 items-start"
+          ><img
+            alt="Jonathan Haidt and First Lady of Virginia Suzanne S. Youngkin"
+            loading="lazy"
+            width="866"
+            height="508"
+            decoding="async"
+            data-nimg="1"
+            class="max-h-[200px] mx-auto rounded-md"
+            :src="item.imageSrc"
+            style="color: transparent"
+          />
+          <h3 class="">{{ item.title }}</h3>
+        </a>
+        <p class="text-xs">
+          {{ item.content }}
+        </p>
+        <div class="rounded-sm mt-2 w-full text-center text-xs bg-white p-2">
+          {{ item.linkText }}
         </div>
       </div>
     </div>

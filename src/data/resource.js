@@ -46,7 +46,7 @@ const category = [
     title: '科技',
     name: 'tech',
     href: '#tech',
-    imageSrc: 'https://www.anxiousgeneration.com/resource-images/mic.svg',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/tech.svg',
   },
 ]
 const books = [
@@ -173,5 +173,230 @@ const books = [
       'https://www.anxiousgeneration.com/_next/image?url=%2Fresource-images%2Funwired.png&w=1080&q=75',
     imageAlt: 'Unwired: Gaining Control Over Addictive Technologies',
   },
+  {
+    id: 16,
+    title: 'From Peter Gray',
+    href: 'https://outdoorschoolshop.com/free-to-learn-why-unleashing-the-instinct-to-play-will-make-our-children-happier-more-self-reliant-and-better-students-for-life/',
+    imageSrc:
+      'https://www.anxiousgeneration.com/_next/image?url=%2Fresource-images%2Fbook-learn.jpg&w=1080&q=75',
+    imageAlt:
+      'Free to Learn: Why unleashing the instinct to play will make our children happier, more self-reliant, and better students for life',
+  },
+  {
+    id: 17,
+    title: 'From Kara Alaimo',
+    href: 'https://www.penguinrandomhouse.com/books/738356/over-the-influence-by-kara-alaimo/',
+    imageSrc:
+      'https://www.anxiousgeneration.com/_next/image?url=%2Fresource-images%2Fover-the-influence.png&w=1080&q=75',
+    imageAlt: 'Over the Influence: Understanding and Addressing Social Medias Impact',
+  },
+  {
+    id: 18,
+    title: 'From Jean Twenge',
+    href: 'https://www.jeantwenge.com/igen-book-by-dr-jean-twenge/',
+    imageSrc:
+      'https://www.anxiousgeneration.com/_next/image?url=%2Fresource-images%2Fbook-igen.jpeg&w=1080&q=75',
+    imageAlt: 'iGen',
+  },
+  {
+    id: 19,
+    title: 'From Jonathan Haidt and Greg Lukianoff',
+    href: 'https://www.thecoddling.com/',
+    imageSrc:
+      'https://www.anxiousgeneration.com/_next/image?url=%2Fresource-images%2Fbook-coddling.jpeg&w=1080&q=75',
+    imageAlt:
+      'The coddling of the american mind: how good intentions and bad ideas are setting up a generation for failure',
+  },
 ]
-export default { books, category }
+const familyResources = [
+  {
+    id: '1',
+    title: 'How to Break Up With Your Phone 30-day text message-based course',
+    href: 'https://catherineprice.com/phone-break-up-challenge',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/course.svg',
+    content:
+      'A interactive, 30-day, text-message-based course from Catherine Price, author of How to Break Up With Your Phone, designed to help you establish...',
+    linkText: 'From Catherine Price',
+  },
+  {
+    id: '2',
+    title: '"Am I Ready for a Personal Device?" a self-evaluations for parents and teens.',
+    href: 'https://www.betterscreentime.com/am-i-ready-for-a-personal-device-a-self-evaluation-for-teens/',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/guide.svg',
+    content:
+      'Our "Am I Ready" self-evaluation has helped thousands of families delay the smartphone and make a better choice once kids start asking, "Can I h...',
+    linkText: 'From Better Screen Time',
+  },
+  {
+    id: '3',
+    title: 'Digital Addictions: A Family Guide to Prevention, Signs, and Treatment',
+    href: 'https://www.childrenandscreens.org/learn-explore/research/digital-addictions-a-family-guide-to-prevention-signs-and-treatment/am-i-ready-for-a-personal-device-a-self-evaluation-for-teens/',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/guide.svg',
+    content:
+      'A guide to assist families in preventing, recognizing, and coping with youth digital addiction....',
+    linkText: 'From Children and Screens: Institute of Digital Media and Child Development',
+  },
+  {
+    id: '4',
+    title: 'Parent Night Kit',
+    href: 'https://screensanity.org/training/parent-night-kit/',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/tool.svg',
+    content:
+      "The Parent Night Kit is a turnkey resource to bring Screen Sanity's highly acclaimed program to your school or organization. The all-inclusive k...",
+    linkText: 'From Screen Sanity',
+  },
+  {
+    id: '5',
+    title: "Let Grow's Parent Resources",
+    href: 'https://letgrow.org/program/parents-and-families/',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/course.svg',
+    content:
+      "To bring more independence and free play into kids' lives, we've got an 'Independence Kit' for parents that helps get kids doing more on their o...",
+    linkText: 'From Let Grow',
+  },
+  {
+    id: '6',
+    title: 'Smartphones: Assessing Readiness',
+    href: 'https://www.waituntil8th.org/family-guides',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/guide.svg',
+    content: 'A tip sheet for parents and caregivers on introducing a smartphone....',
+    linkText: 'From Children and Screens: Institute of Digital Media and Child Development',
+  },
+  {
+    id: '7',
+    title: 'Wait Until 8th Digital Training Family Conversation Guides',
+    href: 'https://www.waituntil8th.org/family-guides',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/guide.svg',
+    content:
+      'Our family guides help your team learn and grow together in the digital arena. Print these downloadable guides to facilitate meaningful conversa...',
+    linkText: 'From Wait Until 8th',
+  },
+  {
+    id: '8',
+    title: 'Parent Risky Play Tool',
+    href: 'https://www.outsideplay.org/tool-microsites/parent-tool',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/tool.svg',
+    content:
+      'This tool helps parents and caregivers develop skills and confidence that enables outdoor play for the children in their lives...',
+    linkText: 'From Outside Play Lab, University of British Columbia',
+  },
+  {
+    id: '9',
+    title: 'How to organize a block party',
+    href: 'https://www.blockpartyusa.org/how-to',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/gdide.svg',
+    content:
+      'No expensive venue. No decorations or favors. No elaborate menu. Block Party USA is simply about relaxing with your neighbors....',
+    linkText: 'From Block Party USA',
+  },
+  {
+    id: '10',
+    title: 'Tech-Healthy Family Hub',
+    href: 'https://www.betterscreentime.com/hub/',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/course.svg',
+    content:
+      'In the Tech-Healthy Family Hub you’ll learn from experts and like-minded parents, access proven resources, and take our self-guided courses to p...',
+    linkText: 'From Better Screen Time',
+  },
+  {
+    id: '11',
+    title: 'Tech Guideline + Family Agreement',
+    href: 'https://www.lookupnonprofit.com/techagreement',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/guide.svg',
+    content:
+      "It's so nice when everyone is on the same page and there are clear understandings/expectations for the whole family. Our tech agreement is meant...",
+    linkText: 'From LookUp Foundation',
+  },
+]
+const educatorResources = [
+  {
+    id: '1',
+    title: 'How to Break Up With Your Phone 30-day text message-based course',
+    href: 'https://catherineprice.com/phone-break-up-challenge',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/course.svg',
+    content:
+      'A interactive, 30-day, text-message-based course from Catherine Price, author of How to Break Up With Your Phone, designed to help you establish a new, healthier relationship with technology. Each day...',
+    linkText: 'From Catherine Price',
+  },
+  {
+    id: '2',
+    title: 'Be Tech Ready Digital Discipleship Curriculum',
+    href: 'https://protectyoungeyes.com/be-tech-ready-biblical-digital-citizenship/',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/course.svg',
+    content:
+      'BTR is a streaming video curriculum, aligned with ISTE and Catholic Theology Standards, that teaches students how to honor God, humanity, and themselves with their digital choices. We do this through ...',
+    linkText: 'From Protect Young Eyes',
+  },
+  {
+    id: '3',
+    title: 'The Educational Technology Industrial Complex Timeline',
+    href: 'https://environmentalprogress.org/education-timeline',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/tool.svg',
+    content: 'A detailed timeline of the rise ed tech since 1979....',
+    linkText: 'From Denise Champney',
+  },
+  {
+    id: '4',
+    title: 'Social Media Literacy Course',
+    href: 'https://www.khanacademy.org/college-careers-more/social-media-challenges-and-opportunities',
+    imageSrc: 'https://www.anxiousgeneration.com/resource-images/course.svg',
+    content:
+      'Our social media environment is broken. Want a roadmap to help fix it? Integrating expertise across technology, mindfulness, and educational instruction, this interactive course helps young people nav...',
+    linkText: 'From Center for Humane Technology',
+  },
+]
+const newsletter = [
+  {
+    id: '1',
+    title: 'Techno Sapiens',
+    href: 'https://technosapiens.substack.com/',
+    imageSrc:
+      'https://www.anxiousgeneration.com/_next/image?url=%2Fresource-images%2Fsub-sapiens.jpeg&w=64&q=75',
+    content:
+      'Find the latest research on psychology and technology, to strategies for improving mental health, to tips for living and parenting in the digital age....',
+    linkText: 'From Tech Without Stress',
+  },
+]
+const video = [
+  {
+    id: '1',
+    title: 'Jonathan Haidt and First Lady of Virginia Suzanne S. Youngkin',
+    href: 'https://youtu.be/1w287BCT4Mw?feature=shared',
+    imageSrc:
+      'https://www.anxiousgeneration.com/_next/image?url=%2Fresource-images%2Fvid-youngkin.jpg&w=1920&q=75',
+    content:
+      'Watch Jon’s conversation with the First Lady about how to roll-back the phone-based childhood in schools and at home....',
+    linkText: 'From Jonathan Haidt',
+  },
+]
+const podcasts = [
+  {
+    id: '1',
+    title: 'Lenore Skenazy on Armchair Expert',
+    href: 'https://armchairexpertpod.com/pods/lenore-skenazy',
+    imageSrc:
+      'https://www.anxiousgeneration.com/_next/image?url=%2Fresource-images%2Fpodf-lenore-skenazy.jpeg&w=640&q=75',
+    linkText: 'From Let Grow',
+  },
+]
+const tech = [
+  {
+    id: '1',
+    title: 'USA Alternatives to Smartphones',
+    href: 'https://armchairexpertpod.com/pods/lenore-skenazy',
+    imageSrc:
+      'https://www.anxiousgeneration.com/_next/image?url=%2Fresource-images%2Fus-phone.jpg&w=1920&q=75',
+    content: 'A list of smartphone alternatives for families in the USA....',
+    linkText: 'From Wait Until 8th',
+  },
+]
+export default {
+  books,
+  familyResources,
+  educatorResources,
+  newsletter,
+  video,
+  podcasts,
+  tech,
+  category,
+}
