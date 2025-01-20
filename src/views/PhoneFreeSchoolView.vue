@@ -1,11 +1,20 @@
 <script setup>
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  TabGroup,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
+} from '@headlessui/vue'
 import { ChevronUpIcon } from '@heroicons/vue/20/solid'
 import BtnBlack from '@/components/BtnBlack.vue'
 import ComponentNavigation from '@/components/ComponentNavigation.vue'
 import faqForPhoneFreeSchool from '@/data/faq-for-phone-free-school'
 
-const { faq, category } = faqForPhoneFreeSchool
+const { faq, category, conversations, takeActions } = faqForPhoneFreeSchool
 </script>
 
 <template>
@@ -245,6 +254,59 @@ const { faq, category } = faqForPhoneFreeSchool
         </div>
       </div>
     </div>
+    <div class="w-full text-black mx-auto py-6 mb-16">
+      <TabGroup>
+        <TabList class="flex space-x-1 rounded-xl p-1">
+          <Tab
+            v-for="category in Object.keys(conversations)"
+            as="template"
+            :key="category.id"
+            v-slot="{ selected }"
+          >
+            <button
+              :class="[
+                'w-full rounded-lg p-2 text-sm font-medium leading-5',
+                'ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2 border flex items-center justify-center',
+                selected ? 'bg-[rgb(189,219,75)] shadow' : ' hover:bg-white/[0.12] ',
+              ]"
+            >
+              {{ category }}
+            </button>
+          </Tab>
+        </TabList>
+
+        <TabPanels class="mt-2">
+          <TabPanel
+            v-for="(posts, idx) in Object.values(conversations)"
+            :key="idx"
+            :class="[
+              'rounded-xl bg-white p-3',
+              'ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+            ]"
+          >
+            <ul>
+              <li v-for="post in posts" :key="post.id" class="relative">
+                <h3 class="text-sm font-medium leading-5">
+                  {{ post.title }}
+                </h3>
+
+                <ul
+                  class="mt-1 ms-3 flex flex-col text-xs font-normal gap-2 leading-4 text-gray-500"
+                >
+                  <li
+                    class="list-disc space-y-2 pt-2"
+                    v-for="(item, index) in post.listItem"
+                    :key="index"
+                  >
+                    <a target="_blank" :href="item.href">{{ item.title }}</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </TabPanel>
+        </TabPanels>
+      </TabGroup>
+    </div>
   </div>
   <!-- 採取行動 -->
   <div class="max-w-6xl mx-auto px-4">
@@ -281,6 +343,71 @@ const { faq, category } = faqForPhoneFreeSchool
           </p>
         </div>
       </div>
+    </div>
+    <div class="w-full text-black mx-auto py-6 mb-16">
+      <TabGroup>
+        <TabList class="flex space-x-1 rounded-xl p-1">
+          <Tab
+            v-for="category in Object.keys(takeActions)"
+            as="template"
+            :key="category.id"
+            v-slot="{ selected }"
+          >
+            <button
+              :class="[
+                'w-full rounded-lg p-2 text-sm font-medium leading-5',
+                'ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2 border flex items-center justify-center',
+                selected ? 'bg-[rgb(189,219,75)] shadow' : ' hover:bg-white/[0.12] ',
+              ]"
+            >
+              {{ category }}
+            </button>
+          </Tab>
+        </TabList>
+
+        <TabPanels class="mt-2">
+          <TabPanel
+            v-for="(posts, idx) in Object.values(takeActions)"
+            :key="idx"
+            :class="[
+              'rounded-xl bg-white p-3',
+              'ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+            ]"
+          >
+            <ul class="grid md:grid-cols-2 gap-8 px-3 md:px-2 py-3">
+              <li v-for="post in posts" :key="post.id" class="relative">
+                <div class="flex gap-2 lg:gap-4">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-8 h-8 lg:w-14 lg:h-14"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                    >
+                      <circle cx="32" cy="32" r="32" fill="#BDDB4B"></circle>
+                      <path
+                        stroke="#111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M42 31.08V32a10 10 0 1 1-5.93-9.14"
+                      ></path>
+                      <path
+                        stroke="#111"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M42 24 32 34.01l-3-3"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="block">{{ post.title }}</span>
+                </div>
+              </li>
+            </ul>
+          </TabPanel>
+        </TabPanels>
+      </TabGroup>
     </div>
   </div>
   <!-- 成功的故事 -->
@@ -407,6 +534,7 @@ const { faq, category } = faqForPhoneFreeSchool
       </ul>
     </div>
   </div>
+
   <!-- 無手機校園的 FAQ -->
   <div :id="category[4].name">
     <div class="flex items-center gap-4 mb-4 lg:mb-0 max-w-6xl mx-auto">

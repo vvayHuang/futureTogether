@@ -1,3 +1,4 @@
+import { ref } from 'vue'
 const category = [
   {
     id: 1,
@@ -30,6 +31,141 @@ const category = [
     name: 'faq',
   },
 ]
+const conversations = ref({
+  辦討論會: [
+    {
+      id: 1,
+      title: 'Here are three of our favorite talks and films to spark discussion:',
+      srcset:
+        'https://www.anxiousgeneration.com/_next/image?url=%2Fphone-free-schools%2Fdiscussion.jpg&w=128&q=75 1x , https://www.anxiousgeneration.com/_next/image?url=%2Fphone-free-schools%2Fdiscussion.jpg&w=256&q=75 2x',
+      imagSrc:
+        'https://www.anxiousgeneration.com/_next/image?url=%2Fphone-free-schools%2Fdiscussion.jpg&w=256&q=75',
+
+      listItem: [
+        {
+          id: 1,
+          title: 'Discussion prompts for parents',
+          href: 'https://www.anxiousgeneration.com/pdfs/thought-starters-for-parents.pdf',
+        },
+        {
+          id: 2,
+          title: 'Discussion prompts for school administrators and teachers',
+          href: 'https://www.anxiousgeneration.com/pdfs/thought-starters-for-educators.pdf',
+        },
+      ],
+    },
+  ],
+  一起看影片: [
+    {
+      id: 1,
+      title: 'Here are three of our favorite talks and films to spark discussion:',
+
+      listItem: [
+        {
+          id: 1,
+          title:
+            'Jonathan Haidt: Smartphones vs. Smart Kids: Watch Jon’s presentation from the 2023 ExcelinEd conferenc',
+          href: 'https://www.youtube.com/watch?v=yVq4ARIlNVg',
+        },
+        {
+          id: 2,
+          title:
+            'Jonathan Haidt and First Lady of Virginia Suzanne S. Youngkin: Watch Jon’s conversation with the First Lady about how to roll back the phone-based childhood in schools and at home',
+          href: 'https://youtu.be/1w287BCT4Mw?feature=shared',
+        },
+        {
+          id: 3,
+          title:
+            'Kids, Smartphones and Social Media: The Risks and the Solutions: a parent talk given by Catherine Price, author of How to Break Up With Your Phone, referred to by Jon Haidt as “the talk every parent should watch”',
+          href: 'https://www.youtube.com/watch?v=Ro-XgHp7OPA',
+        },
+      ],
+    },
+  ],
+  請人演講: [
+    {
+      id: 1,
+      title:
+        'Host a speaker from our esteemed panel, including Zach Rausch, Catherine Price, and Lenore Skenazy.',
+
+      listItem: [
+        {
+          id: 1,
+          title: 'Click here to learn more and inquire about speaking availability.',
+          href: 'https://www.anxiousgeneration.com/speakers',
+        },
+      ],
+    },
+  ],
+})
+const takeActions = ref({
+  父母的行動: [
+    {
+      id: 1,
+      title:
+        'Educate Parents and Admin: If your school does not already have a phone-free policy from bell to bell, the first step is to educate your school’s administration and parent community about why such a policy is necessary. Read and share: The Case for Phone-Free Schools and How Schools Can Help End the Phone-Based Childhood and of course The Anxious Generation (here’s a discussion guide you can offer to parents). ',
+    },
+    {
+      id: 2,
+      title:
+        'Implement a Phone-Free Policy: If your school is considering a phone-free policy (or if it already has one, but there are problems) we recommend downloading the Phone-Free Schools Movements Phone-Free School Administrator Toolkit — its a detailed, step-by-step guide for how to roll out a phone-free policy at your school (courtesy of PhoneFreeSchoolMovement.org). ',
+    },
+    {
+      id: 3,
+      title:
+        'Plan for Storing Phones: Make sure that any discussion at your school about a phone-free policy includes a plan for where students’ phones will be stored during the day, whose responsibility it is to enforce the rules (ideally, it’s not the teachers’!), and what the consequences will be for breaking them.',
+    },
+    {
+      id: 4,
+      title:
+        'Provide Students With Play-Based Alternatives: Phone-free policies are most effective when students are also offered opportunities for play, independence, and social engagement during times when they might otherwise have reached for their phones. For example, if you’re a homeroom teacher, you could keep a few board games in your classrooms for use before school and during breaks.',
+    },
+  ],
+  老師的行動: [
+    {
+      id: 1,
+      title:
+        'Make the Case: If your child’s school has not yet committed to going phone-free, the first step is to educate your community about why such a policy is necessary. If school administrators, educators, students, and parents don’t understand why you’re banning smartphones from school, they are more likely to resist. Read and share: The Case for Phone-Free Schools and our Substack Series: What Schools and Educators Can Do Now and of course, The Anxious Generation (here’s a discussion guide you can offer to parents). ',
+    },
+    {
+      id: 2,
+      title:
+        'Rally Support: Use this petition form to invite fellow parents and community members to petition your local school or school board to go phone-free from bell to bell. You may also want to read this guide from Protect Young Eyes about How to Talk to Your School District about Removing Smartphones.',
+    },
+    {
+      id: 3,
+      title:
+        'Let Your Kids School Know: School administrators often want to implement bell-to-bell phone-free schools, but they hesitate because of pushback from parents, who want to be able to reach their child during the school day. We respond to these concerns on our FAQ page. In sum, we believe that, when needed, parents should contact their child through the school, and allow other exchanges to wait until after last bell. This would improve their childs ability to focus in class, would enable them to socialize with other students, and it would translate to fewer dopamine hikes during the day and reduced screen time overall. If you agree that this exchange is worth it, please let your childs school know!',
+    },
+    {
+      id: 4,
+      title:
+        'Advocate for Play and Independence: Encourage your child’s school to go a step further by starting a Let Grow Play Club for students in K-8: keeping the playground open before or after school as a no-phone-zone for mixed-age free play with minimal adult intervention.',
+    },
+  ],
+  校長的行動: [
+    {
+      id: 1,
+      title:
+        'Make The Case To Parents and Students: If your school does not already have a phone-free policy from bell to bell, the first step is to educate your school’s administration, parent, and student community about why such a policy is necessary. Read and share: The Case for Phone-Free Schools and How Schools Can Help End The Phone-Based Childhood and of course, The Anxious Generation (here’s a discussion guide you can offer to parents).',
+    },
+    {
+      id: 2,
+      title:
+        'Create and Implement A Phone-Free Policy: If your school is in the process of considering a phone-free policy (or if it already has one, but there are implementation issues) we recommend downloading the Phone-Free Schools Movements Phone-Free School Administrator Toolkit—its a detailed, step-by-step guide for how to roll out a phone-free policy at your school. (courtesy of PhoneFreeSchoolMovement.org).',
+    },
+    {
+      id: 3,
+      title:
+        'Communicate With Parents: In order to succeed, you’ll need to get parents on board. Here’s a template email that you can send to parents to invite them to learn more about why your phone is going phone-free (and here is a sample letter from a school announcing its phone-free policy). Be sure to also include a way for parents to reach out to you with questions or concerns.',
+    },
+    {
+      id: 4,
+      title:
+        'Anticipate Parental Anxiety – And Have A Plan: Establish a system for how parents can communicate with their children during the school day about schedule changes or family emergencies. ',
+    },
+  ],
+})
 const faq = [
   {
     id: 1,
@@ -102,4 +238,4 @@ const faq = [
       'For inspirational success stories about what a phone-free school could look like, check out these articles from The Washington Post, The Spectator, and The Guardian about schools that have gone phone-free, as well as our list of schools and school districts that have already committed themselves to going phone-free.You may also want to check out The Effects of Phone-Free Schools: A Collaborative Review, an ongoing open-source literature review posted and curated by Jonathan Haidt (NYU-Stern) and Zach Rausch (NYU-Stern). This document collects and organizes the published studies and essays addressing the questions: (1) What do we know about phone-free schools’ social, educational, and mental health impacts? And (2) how can elementary and middle schools best manage smartphone use during the school day?”',
   },
 ]
-export default { category, faq }
+export default { category, conversations, takeActions, faq }
