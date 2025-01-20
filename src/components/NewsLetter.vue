@@ -72,37 +72,45 @@ const sendForm = (url) => {
     <form id="google-form">
       <div class="grid grid-cols-2 gap-4 justify-center max-w-xl mx-auto text-left px-4">
         <div>
-          <label class="block" for="name">姓名</label>
-          <input
-            class="p-2 border w-full"
-            type="text"
-            id="name"
-            v-model="formData.name"
-            required
-            placeholder="姓名"
-          />
+          <label class="block">
+            <span class="text-gray-700 block" for="name">姓名</span>
+            <input
+              type="text"
+              class="mt-1 block p-2 border w-full"
+              id="name"
+              v-model="formData.name"
+              required
+              placeholder="姓名"
+            />
+          </label>
         </div>
         <div>
-          <label class="block" for="email">電子信箱</label>
-          <input
-            class="p-2 border w-full"
-            type="email"
-            id="email"
-            v-model="formData.email"
-            required
-            placeholder="你的信箱"
-          />
+          <label class="block">
+            <span class="text-gray-700 block" for="email">電子信箱</span>
+            <input
+              type="email"
+              class="mt-1 block p-2 border w-full"
+              name="email"
+              id="email"
+              autocomplete="email"
+              v-model="formData.email"
+              required
+              placeholder="你的信箱"
+            />
+          </label>
         </div>
         <div>
-          <label class="block" for="persona">你的職業</label>
-          <select id="persona" class="p-2 border w-full" v-model="formData.persona">
-            <option value="" disabled hidden>請選擇</option>
-            <option value="雙親">雙親</option>
-            <option value="教育者">教育者</option>
-            <option value="立法者">立法者</option>
-            <option value="Z世代">Z世代</option>
-            <option value="其他">其他</option>
-          </select>
+          <label class="block" for="persona">
+            <span class="text-gray-700">你的職業</span>
+            <select id="persona" class="p-2 border w-full" v-model="formData.persona">
+              <option value="" disabled hidden>請選擇</option>
+              <option value="雙親">雙親</option>
+              <option value="教育者">教育者</option>
+              <option value="立法者">立法者</option>
+              <option value="Z世代">Z世代</option>
+              <option value="其他">其他</option>
+            </select>
+          </label>
         </div>
       </div>
     </form>
