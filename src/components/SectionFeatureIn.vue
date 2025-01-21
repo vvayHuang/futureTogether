@@ -129,28 +129,17 @@
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Opens in a new tab: Logo GMA"
-        ><div class="flex items-center">
-          <img
-            alt="Logo GMA"
-            loading="lazy"
-            width="566"
-            height="508"
-            decoding="async"
-            data-nimg="1"
-            style="color: transparent"
-            src="https://udn.com/static/img/logo.svg?2020020601"
-          />
-          <img
-            alt="Logo GMA"
-            loading="lazy"
-            width="566"
-            height="508"
-            decoding="async"
-            data-nimg="1"
-            style="color: transparent"
-            src="https://udn.com/static/img/logo_name.svg?202002"
-          />
-        </div>
+      >
+        <img
+          alt="Logo GMA"
+          loading="lazy"
+          width="566"
+          height="508"
+          decoding="async"
+          data-nimg="1"
+          style="color: transparent"
+          src="https://udn.com/static/img/logo_name.svg?202002"
+        />
       </a>
     </div>
   </div>
