@@ -1,6 +1,5 @@
 <script setup>
 import ComponentNavigation from '@/components/ComponentNavigation.vue'
-import NavbarHeader from '@/components/NavbarHeader.vue'
 </script>
 
 <template>
@@ -26,7 +25,7 @@ import NavbarHeader from '@/components/NavbarHeader.vue'
       <div
         class="mx-auto w-full grid grid-cols-1 max-w-2xl lg:max-w-none lg:grid-cols-3 gap-x-8 gap-y-4 pt-6"
       >
-        <div class="flex flex-col items-start border-b justify-between items-center">
+        <div class="flex flex-col items-start border-b justify-between">
           <a
             class="flex flex-col justify-between h-full min-w-full"
             href="/research/collaborative-review-docs"
@@ -72,7 +71,7 @@ import NavbarHeader from '@/components/NavbarHeader.vue'
             </div></a
           >
         </div>
-        <div class="flex flex-col items-start border-b justify-between items-center">
+        <div class="flex flex-col items-start border-b justify-between">
           <a
             class="flex flex-col justify-between h-full min-w-full"
             href="/research/collaborative-review-docs"
